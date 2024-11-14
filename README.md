@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Task Manager (To-Do) App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and efficient task management application built with ReactJS. This app allows users to add, delete, and mark tasks as completed, as well as search tasks with an advanced scoring-based search algorithm. It's designed to make organizing daily tasks easy and productive, with tasks stored in local storage for persistent access.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add Tasks**: Create new tasks with title, description, category, and priority.
+- **Delete Tasks**: Remove tasks that are no longer needed.
+- **Complete Tasks**: Mark tasks as completed to keep track of what’s done.
+- **Advanced Search Functionality**: Search tasks based on title, description, category, and priority using a custom scoring algorithm.
+- **Random Task Generation**: Generate random tasks from a predefined list in `randomTasks.json`.
+- **Persistent Storage**: Tasks are stored in local storage, so they remain accessible even after refreshing the page.
 
-### `npm start`
+## Search Algorithm
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The search feature includes a weighted scoring algorithm to rank tasks based on how well they match the search input. Here's how the search works:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Field Weights**: Each field (title, description, category, and priority) has a different weight, prioritizing the title and description.
+2. **Case-Insensitive Matching**: The search is case-insensitive.
+3. **Exact and Partial Matching**: Exact matches get the highest score, partial matches get a lower score, and individual word matches are also considered.
+4. **Sorting**: Tasks with the highest match scores appear first in the search results.
 
-### `npm test`
+### Code Snippet
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The search function, `handleSearchTasks`, calculates and sorts tasks based on the relevance to the search query:
 
-### `npm run build`
+```javascript
+const handleSearchTasks = (searchParam) => {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  if (!searchParam?.trim()) {
+    setAllTasks(tasks);
+    return;
+  }
+  const searchTerm = searchParam.toLowerCase();
+  const weights = { title: 3, description: 2, category: 2, priority: 1 };
+  const scoredTasks = tasks.map(task => {
+    let score = 0;
+    const calculateFieldScore = (fieldValue, weight) => {
+      if (!fieldValue) return 0;
+      const value = fieldValue.toLowerCase();
+      if (value === searchTerm) return weight * 2;
+      if (value.includes(searchTerm)) return weight;
+      const searchWords = searchTerm.split(' ');
+      const fieldWords = value.split(' ');
+      return searchWords.reduce((acc, searchWord) => {
+        return acc + (fieldWords.some(fieldWord => fieldWord.includes(searchWord)) ? 0.5 : 0);
+      }, 0) * weight;
+    };
+    score += calculateFieldScore(task.title, weights.title);
+    score += calculateFieldScore(task.description, weights.description);
+    score += calculateFieldScore(task.category, weights.category);
+    score += calculateFieldScore(task.priority, weights.priority);
+    return { ...task, score };
+  });
+  const filteredTasks = scoredTasks.filter(task => task.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(({ score, ...task }) => task);
+  setAllTasks(filteredTasks);
+};
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (v14+ recommended)
+- npm (v6+ recommended)
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   git clone https://github.com/udaythakare/flare-manager.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate into the project directory:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   cd flare-manager
+   ```
 
-## Learn More
+3. Install the dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Start the development server:
 
-### Code Splitting
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
-### Analyzing the Bundle Size
+### Adding Random Tasks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To add random tasks, the app reads from a `randomTasks.json` file. These tasks can be added to your list to quickly populate your task manager.
 
-### Making a Progressive Web App
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **ReactJS**: Frontend framework for building user interfaces.
+- **CSS/Tailwind CSS**: For responsive styling.
+- **Local Storage**: For task persistence.
