@@ -2,6 +2,9 @@
 
 A simple and efficient task management application built with ReactJS. This app allows users to add, delete, and mark tasks as completed, as well as search tasks with an advanced scoring-based search algorithm. It's designed to make organizing daily tasks easy and productive, with tasks stored in local storage for persistent access.
 
+![image](https://github.com/user-attachments/assets/d97134cc-e0ba-42f6-bc00-8c899e698a57)
+
+
 ## Features
 
 - **Add Tasks**: Create new tasks with title, description, category, and priority.
