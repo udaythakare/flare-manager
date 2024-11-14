@@ -1,0 +1,284 @@
+{
+    "tasks": [
+        {
+            "uniqueId": 1699951200000,
+            "title": "Complete Q4 Financial Report",
+            "description": "Prepare and finalize the quarterly financial report including revenue analysis and expense breakdown",
+            "category": "Finance",
+            "isCompleted": true,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699951260000,
+            "title": "Plan Team Building Event",
+            "description": "Organize a virtual team building activity for remote employees",
+            "category": "HR",
+            "isCompleted": false,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699951320000,
+            "title": "Debug Login Authentication",
+            "description": "Fix user authentication issues reported in the mobile app",
+            "category": "Development",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699951380000,
+            "title": "Update Company Blog",
+            "description": "Write and publish a blog post about our latest product features",
+            "category": "Marketing",
+            "isCompleted": true,
+            "priority": "Low"
+        },
+        {
+            "uniqueId": 1699951440000,
+            "title": "Review Job Applications",
+            "description": "Screen resumes for the Senior Developer position",
+            "category": "Recruitment",
+            "isCompleted": false,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699951500000,
+            "title": "Prepare Client Presentation",
+            "description": "Create slides for the upcoming client meeting about project milestones",
+            "category": "Sales",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699951560000,
+            "title": "Update Documentation",
+            "description": "Review and update API documentation for new endpoints",
+            "category": "Development",
+            "isCompleted": true,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699951620000,
+            "title": "Schedule Office Maintenance",
+            "description": "Coordinate with facilities team for monthly maintenance check",
+            "category": "Administration",
+            "isCompleted": false,
+            "priority": "Low"
+        },
+        {
+            "uniqueId": 1699951680000,
+            "title": "Social Media Campaign",
+            "description": "Launch winter sale campaign across all social media platforms",
+            "category": "Marketing",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699951740000,
+            "title": "Update Security Protocols",
+            "description": "Review and implement new security measures for cloud infrastructure",
+            "category": "IT Security",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699951800000,
+            "title": "Employee Training Session",
+            "description": "Conduct training on new project management tools",
+            "category": "Training",
+            "isCompleted": true,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699951860000,
+            "title": "Inventory Check",
+            "description": "Perform monthly inventory audit of office supplies",
+            "category": "Administration",
+            "isCompleted": false,
+            "priority": "Low"
+        },
+        {
+            "uniqueId": 1699951920000,
+            "title": "Client Contract Review",
+            "description": "Review and update service agreements for major clients",
+            "category": "Legal",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699951980000,
+            "title": "Team Performance Reviews",
+            "description": "Complete quarterly performance evaluations for team members",
+            "category": "HR",
+            "isCompleted": true,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699952040000,
+            "title": "Update Project Timeline",
+            "description": "Revise project milestones and deadlines for Q1 2024",
+            "category": "Project Management",
+            "isCompleted": false,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699952100000,
+            "title": "Create Monthly Newsletter",
+            "description": "Draft and send out the monthly newsletter to all subscribers",
+            "category": "Marketing",
+            "isCompleted": false,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699952160000,
+            "title": "Test Payment Gateway",
+            "description": "Ensure the payment gateway is functioning correctly on the website",
+            "category": "Development",
+            "isCompleted": true,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699952220000,
+            "title": "Organize Quarterly Town Hall",
+            "description": "Schedule and coordinate the virtual town hall meeting for Q4",
+            "category": "HR",
+            "isCompleted": false,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699952280000,
+            "title": "Renew Domain Registrations",
+            "description": "Verify and renew domain registrations expiring soon",
+            "category": "IT Security",
+            "isCompleted": true,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699952340000,
+            "title": "Develop Onboarding Process",
+            "description": "Design a streamlined onboarding process for new hires",
+            "category": "HR",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699952400000,
+            "title": "Analyze Social Media Metrics",
+            "description": "Evaluate the performance of recent social media posts",
+            "category": "Marketing",
+            "isCompleted": true,
+            "priority": "Low"
+        },
+        {
+            "uniqueId": 1699952460000,
+            "title": "Budget Planning for Q1",
+            "description": "Create the budget plan for the first quarter of the next year",
+            "category": "Finance",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699952520000,
+            "title": "Create Marketing Video",
+            "description": "Produce a promotional video highlighting new services",
+            "category": "Marketing",
+            "isCompleted": false,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699952580000,
+            "title": "Check Server Backups",
+            "description": "Verify that all server backups are recent and complete",
+            "category": "IT Security",
+            "isCompleted": true,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699952640000,
+            "title": "Prepare for Product Demo",
+            "description": "Finalize product features and prepare a live demo",
+            "category": "Sales",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699952700000,
+            "title": "Revise Employee Handbook",
+            "description": "Update policies in the employee handbook",
+            "category": "HR",
+            "isCompleted": true,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699952760000,
+            "title": "Supplier Price Negotiations",
+            "description": "Negotiate pricing for materials with top suppliers",
+            "category": "Finance",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699952820000,
+            "title": "Create Training Material",
+            "description": "Develop new training materials for project management tools",
+            "category": "Training",
+            "isCompleted": false,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699952880000,
+            "title": "Optimize SEO for Blog",
+            "description": "Improve the SEO of recent blog posts to increase traffic",
+            "category": "Marketing",
+            "isCompleted": true,
+            "priority": "Low"
+        },
+        {
+            "uniqueId": 1699952940000,
+            "title": "Run Security Audit",
+            "description": "Conduct a security audit of all internal applications",
+            "category": "IT Security",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699953000000,
+            "title": "Review Marketing Strategy",
+            "description": "Assess and update the overall marketing strategy for next year",
+            "category": "Marketing",
+            "isCompleted": false,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699953060000,
+            "title": "Deploy Mobile App Update",
+            "description": "Release the latest update for the mobile application",
+            "category": "Development",
+            "isCompleted": true,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699953120000,
+            "title": "Client Feedback Survey",
+            "description": "Prepare a feedback survey for recent clients",
+            "category": "Sales",
+            "isCompleted": false,
+            "priority": "Medium"
+        },
+        {
+            "uniqueId": 1699953180000,
+            "title": "Develop Sales Pipeline",
+            "description": "Organize potential leads and create a new sales pipeline",
+            "category": "Sales",
+            "isCompleted": false,
+            "priority": "High"
+        },
+        {
+            "uniqueId": 1699953240000,
+            "title": "Organize Office Supplies",
+            "description": "Order and arrange supplies in the storage area",
+            "category": "Administration",
+            "isCompleted": true,
+            "priority": "Low"
+        }
+    ]
+}
